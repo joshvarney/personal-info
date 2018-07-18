@@ -3,11 +3,10 @@ require 'sinatra'
 get '/' do 
 	erb :name
 end
-
 post '/name' do
-first_name = params[:first_name]
-last_name = params[:last_name]
-redirect '/home_address?first_name=' + first_name + '&last_name=' + last_name
+	first_name = params[:first_name]
+	last_name = params[:last_name]
+	redirect '/home_address?first_name=' + first_name + '&last_name=' + last_name
 end
 get '/home_address' do
 	first_name = params[:first_name]
@@ -34,8 +33,8 @@ get '/fav_numbers' do
 	fav_num1 = params[:fav_num1]
 	fav_num2 = params[:fav_num2]
 	fav_num3 = params[:fav_num3]
-	erb :fav_numbers, locals:{first_name: params[:first_name], last_name: params[:last_name], address: params[:address], city: [:city], state: params[:state], zip: params[:zip]}
-	end
+	erb :fav_numbers, locals:{first_name: params[:first_name], last_name: params[:last_name], address: params[:address], city: params[:city], state: params[:state], zip: params[:zip]}
+end
 post '/fav_numbers' do
 	first_name = params[:first_name]
 	last_name = params[:last_name]
@@ -46,7 +45,7 @@ post '/fav_numbers' do
 	fav_num1 = params[:fav_num1]
 	fav_num2 = params[:fav_num2]
 	fav_num3 = params[:fav_num3]
-	erb :fav_numbers, locals:{first_name: params[:first_name], last_name: params[:last_name], address: params[:address], city: [:city], state: params[:state], zip: params[:zip]}
+	erb :fav_numbers, locals:{first_name: params[:first_name], last_name: params[:last_name], address: params[:address], city: params[:city], state: params[:state], zip: params[:zip]}
 	redirect '/final_page?first_name=' + first_name + '&last_name=' + last_name + '&address=' + address + '&city=' + city + '&state=' + state + '&zip=' + zip + '&fav_num1=' + fav_num1 + '&fav_num2=' + fav_num2 + '&fav_num3=' + fav_num3
 end
 get '/final_page' do
@@ -59,5 +58,5 @@ get '/final_page' do
 	fav_num1 = params[:fav_num1]
 	fav_num2 = params[:fav_num2]
 	fav_num3 = params[:fav_num3]
-erb :final_page, locals:{first_name: params[:first_name], last_name: params[:last_name], address: params[:address], city: [:city], state: params[:state], zip: params[:zip], fav_num1: params[:fav_num1], fav_num2: params[:fav_num2], fav_num3: params[:fav_num3]}
+	erb :final_page, locals:{first_name: params[:first_name], last_name: params[:last_name], address: params[:address], city: params[:city], state: params[:state], zip: params[:zip], fav_num1: params[:fav_num1], fav_num2: params[:fav_num2], fav_num3: params[:fav_num3]}
 end
