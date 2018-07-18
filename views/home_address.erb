@@ -1,17 +1,14 @@
-
-<h1>Welcome <%=first_name%> <%=last_name%>!</h1>
-<h1>Please enter your address:</h1>
+<h1>Hello, <%=first_name%> <%=last_name%> where do you live?</h1>
 <form method="post" action="home_address">
 <input type="hidden" name="first_name" value="<%=first_name%>">
 <input type="hidden" name="last_name" value="<%=last_name%>">
-<h3>Address:</h3>
-<input type="text" name="address" required autofocus>
-<h3>City:</h3>
-<input type="text" name="city" required>
-<h3>State:</h3>
-<input type="text" name="state" required>
-<h3>Zip-code:</h3>
-<input type="number" name="zip" required>
+<input type="text" name="address" placeholder="Address" required autofocus>
 <br><br>
-<input type="submit" value="Submit" onclick>
+<input type="text" name="city" placeholder="City" required>
+<br><br>
+<input type="text" name="state" placeholder="State" required>
+<br><br>
+<input type="number" name="zip" placeholder="Zip-code" required>
+<br><br>
+<input class="button" type="submit" value="Submit" onclick>
 </form>
