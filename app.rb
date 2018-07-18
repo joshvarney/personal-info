@@ -30,9 +30,6 @@ get '/fav_numbers' do
 	city = params[:city]
 	state = params[:state]
 	zip = params[:zip]
-	fav_num1 = params[:fav_num1]
-	fav_num2 = params[:fav_num2]
-	fav_num3 = params[:fav_num3]
 	erb :fav_numbers, locals:{first_name: params[:first_name], last_name: params[:last_name], address: params[:address], city: params[:city], state: params[:state], zip: params[:zip]}
 end
 post '/fav_numbers' do
