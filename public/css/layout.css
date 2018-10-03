@@ -5,12 +5,12 @@ body {
 .body_div{
 	text-align: center;
 	align-items: center;
-    background-color: darkgrey;
-    width: 300px;
-    border: 25px solid black;
-    padding: 25px;
-    margin: 25px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 1), 0 6px 20px 0 rgba(0, 0, 0, 0.8);
+  background-color: darkgrey;
+  width: 300px;
+  border: 25px solid black;
+  padding: 25px;
+  margin: 25px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 1), 0 6px 20px 0 rgba(0, 0, 0, 0.8);
 
 }
 .button {
